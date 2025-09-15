@@ -12,12 +12,11 @@ import {
   Building,
   MapPin,
   Mail,
-  Download,
+  Phone,
   Shield,
   GraduationCap,
   Laptop,
   Quote,
-  Calendar,
   Linkedin
 } from "lucide-react";
 
@@ -48,23 +47,13 @@ export default function Home() {
   ];
 
   const handleContact = () => {
-    // TODO: Implement contact form functionality
-    console.log("Contact clicked");
-  };
-
-  const handleDownloadCV = () => {
-    // TODO: Implement CV download functionality
-    console.log("Download CV clicked");
-  };
-
-  const handleScheduleCall = () => {
-    // TODO: Implement calendar scheduling
-    console.log("Schedule call clicked");
+    // Open device's default calling app with pre-populated number
+    window.location.href = "tel:+27 68 113 1436";
   };
 
   const handleLinkedIn = () => {
-    // TODO: Add LinkedIn profile integration
-    console.log("LinkedIn clicked");
+    // Open LinkedIn profile in new tab
+    window.open("https://www.linkedin.com/in/lebohang-kay-khoahlape-785a7a180", "_blank");
   };
 
   return (
@@ -73,20 +62,38 @@ export default function Home() {
       <header className="hero-gradient text-primary-foreground py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-8">
-            {/* Profile Photo Placeholder */}
+            {/* Profile Photo */}
             <div className="relative">
               <div className="w-48 h-48 rounded-full bg-primary-foreground/20 border-4 border-primary-foreground/30 flex items-center justify-center overflow-hidden">
-                <User className="w-24 h-24 text-primary-foreground/60" data-testid="img-profile-placeholder" />
+                <div className="w-full h-full text-[12rem] flex items-center justify-center" data-testid="img-profile-avatar">
+                  👩🏾‍💼
+                </div>
               </div>
               <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-accent rounded-full flex items-center justify-center">
                 <Star className="w-6 h-6 text-accent-foreground" />
+              </div>
+              {/* Animated stars around avatar */}
+              <div className="absolute -top-2 -left-2 w-6 h-6 text-yellow-300 animate-bounce" style={{animationDelay: '0s'}}>
+                ⭐
+              </div>
+              <div className="absolute top-4 -right-4 w-6 h-6 text-yellow-300 animate-bounce" style={{animationDelay: '0.5s'}}>
+                ⭐
+              </div>
+              <div className="absolute -bottom-4 left-4 w-6 h-6 text-yellow-300 animate-bounce" style={{animationDelay: '1s'}}>
+                ⭐
+              </div>
+              <div className="absolute top-12 -left-6 w-4 h-4 text-yellow-200 animate-pulse" style={{animationDelay: '1.5s'}}>
+                ✨
+              </div>
+              <div className="absolute bottom-12 -right-6 w-4 h-4 text-yellow-200 animate-pulse" style={{animationDelay: '2s'}}>
+                ✨
               </div>
             </div>
             
             {/* Header Content */}
             <div className="flex-1 text-center lg:text-left">
               <h1 className="text-5xl lg:text-6xl font-bold mb-4" data-testid="text-name">
-                Lebo Khoahlape
+                Lebohang Khoahlape
               </h1>
               <h2 className="text-2xl lg:text-3xl font-light mb-6 opacity-90" data-testid="text-title">
                 Founder & Business Development Lead
@@ -102,7 +109,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-2 bg-primary-foreground/20 px-4 py-2 rounded-full">
                   <Mail className="w-4 h-4" />
-                  <span>lebo@espaneng.com</span>
+                  <span>lebokhoahlape@gmail.com</span>
                 </div>
               </div>
               <div className="flex justify-center lg:justify-start gap-4">
@@ -111,17 +118,8 @@ export default function Home() {
                   onClick={handleContact}
                   data-testid="button-contact"
                 >
-                  <Mail className="w-4 h-4 mr-2" />
+                  <Phone className="w-4 h-4 mr-2" />
                   Contact Me
-                </Button>
-                <Button 
-                  variant="outline"
-                  className="border-2 border-primary-foreground/30 hover:bg-primary-foreground/10 px-8 py-3 font-semibold"
-                  onClick={handleDownloadCV}
-                  data-testid="button-download-cv"
-                >
-                  <Download className="w-4 h-4 mr-2" />
-                  Download CV
                 </Button>
               </div>
             </div>
@@ -173,44 +171,20 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-foreground" data-testid="heading-role">Role at ESPANENG</h2>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <h3 className="text-xl font-semibold text-primary mb-4">Key Responsibilities</h3>
-              <ul className="space-y-4">
-                {responsibilities.map((responsibility, index) => (
-                  <li 
-                    key={index}
-                    className="flex items-start gap-3 p-4 bg-muted rounded-lg hover:bg-muted/80 transition-colors"
-                    data-testid={`item-responsibility-${index}`}
-                  >
-                    <div className="w-2 h-2 bg-accent rounded-full mt-3 flex-shrink-0"></div>
-                    <p className="text-muted-foreground">{responsibility}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            <div className="bg-primary/5 rounded-xl p-6 border-l-4 border-primary">
-              <h4 className="text-lg font-semibold text-primary mb-4">Impact Areas</h4>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-center" data-testid="metric-partnerships">
-                  <div className="text-2xl font-bold text-primary">50+</div>
-                  <div className="text-sm text-muted-foreground">Partnerships</div>
-                </div>
-                <div className="text-center" data-testid="metric-smes">
-                  <div className="text-2xl font-bold text-primary">100+</div>
-                  <div className="text-sm text-muted-foreground">SMEs Engaged</div>
-                </div>
-                <div className="text-center" data-testid="metric-institutions">
-                  <div className="text-2xl font-bold text-primary">25+</div>
-                  <div className="text-sm text-muted-foreground">Institutions</div>
-                </div>
-                <div className="text-center" data-testid="metric-provinces">
-                  <div className="text-2xl font-bold text-primary">5+</div>
-                  <div className="text-sm text-muted-foreground">Provinces</div>
-                </div>
-              </div>
-            </div>
+          <div className="space-y-6">
+            <h3 className="text-xl font-semibold text-primary mb-4">Key Responsibilities</h3>
+            <ul className="space-y-4">
+              {responsibilities.map((responsibility, index) => (
+                <li 
+                  key={index}
+                  className="flex items-start gap-3 p-4 bg-muted rounded-lg hover:bg-primary hover:text-primary-foreground hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out transform cursor-pointer group"
+                  data-testid={`item-responsibility-${index}`}
+                >
+                  <div className="w-2 h-2 bg-accent rounded-full mt-3 flex-shrink-0 group-hover:bg-accent-foreground transition-colors duration-300"></div>
+                  <p className="text-muted-foreground group-hover:text-primary-foreground transition-colors duration-300">{responsibility}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
@@ -267,7 +241,7 @@ export default function Home() {
             <div className="flex items-center justify-center gap-4">
               <div className="w-1 h-16 bg-accent"></div>
               <div className="text-left">
-                <div className="font-semibold text-foreground">Lebo Khoahlape</div>
+                <div className="font-semibold text-foreground">Lebohang Khoahlape</div>
                 <div className="text-muted-foreground">Founder & Business Development Lead</div>
               </div>
             </div>
@@ -286,21 +260,11 @@ export default function Home() {
               onClick={handleContact}
               data-testid="button-send-message"
             >
-              <Mail className="w-5 h-5 mr-2" />
-              Send Message
+              <Phone className="w-5 h-5 mr-2" />
+              Call Now
             </Button>
             <Button 
-              variant="outline"
-              className="border-2 border-primary-foreground/30 hover:bg-primary-foreground/10 px-8 py-4 font-semibold text-lg"
-              onClick={handleScheduleCall}
-              data-testid="button-schedule-call"
-            >
-              <Calendar className="w-5 h-5 mr-2" />
-              Schedule Call
-            </Button>
-            <Button 
-              variant="outline"
-              className="border-2 border-primary-foreground/30 hover:bg-primary-foreground/10 px-8 py-4 font-semibold text-lg"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 font-semibold text-lg"
               onClick={handleLinkedIn}
               data-testid="button-linkedin"
             >
@@ -314,7 +278,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-muted py-8 px-6 mt-16">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-muted-foreground">&copy; 2024 Lebo Khoahlape. All rights reserved.</p>
+          <p className="text-muted-foreground">&copy; 2025 Lebohang Khoahlape. All rights reserved.</p>
           <p className="text-sm text-muted-foreground mt-2">Empowering education and SMEs through innovative partnerships.</p>
         </div>
       </footer>
