@@ -53,7 +53,7 @@ export default function Home() {
 
   const handleLinkedIn = () => {
     // Open LinkedIn profile in new tab
-    window.open("linkedin.com/in/lebohang-kay-khoahlape-785a7a180", "_blank");
+    window.open("https://www.linkedin.com/in/lebohang-kay-khoahlape-785a7a18", "_blank");
   };
 
   return (
@@ -93,7 +93,7 @@ export default function Home() {
             {/* Header Content */}
             <div className="flex-1 text-center lg:text-left">
               <h1 className="text-5xl lg:text-6xl font-bold mb-4" data-testid="text-name">
-                Lebo Khoahlape
+                Lebohang Khoahlape
               </h1>
               <h2 className="text-2xl lg:text-3xl font-light mb-6 opacity-90" data-testid="text-title">
                 Founder & Business Development Lead
@@ -241,7 +241,7 @@ export default function Home() {
             <div className="flex items-center justify-center gap-4">
               <div className="w-1 h-16 bg-accent"></div>
               <div className="text-left">
-                <div className="font-semibold text-foreground">Lebo Khoahlape</div>
+                <div className="font-semibold text-foreground">Lebohang Khoahlape</div>
                 <div className="text-muted-foreground">Founder & Business Development Lead</div>
               </div>
             </div>
@@ -278,7 +278,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-muted py-8 px-6 mt-16">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-muted-foreground">&copy; 2025 Lebo Khoahlape. All rights reserved.</p>
+          <p className="text-muted-foreground">&copy; 2025 Lebohang Khoahlape. All rights reserved.</p>
           <p className="text-sm text-muted-foreground mt-2">Empowering education and SMEs through innovative partnerships.</p>
         </div>
       </footer>
