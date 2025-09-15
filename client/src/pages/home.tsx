@@ -1,59 +1,63 @@
+
+
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { 
   User, 
   Briefcase, 
   Star, 
-  ChartLine, 
-  Handshake, 
-  Users, 
-  UserCheck, 
-  Lightbulb,
+  Code, 
+  Database, 
+  Cloud, 
+  Shield, 
+  Settings,
+  Server,
   Building,
   MapPin,
   Mail,
   Phone,
-  Shield,
-  GraduationCap,
-  Laptop,
   Quote,
-  Linkedin
+  Linkedin,
+  Layers,
+  GitBranch,
+  Monitor,
+  Lock
 } from "lucide-react";
 
 export default function Home() {
   const responsibilities = [
-    "Leads business development, partnerships, and funding strategy.",
-    "Builds institutional relationships with universities, TVETs, and SMEs.",
-    "Oversees market strategy, branding, and national scale-up roadmap."
+    "Leads system architecture and MVP development.",
+    "Ensures POPIA-compliant, secure, and scalable tech infrastructure.",
+    "Bridges institutional workflows with intuitive digital tools."
   ];
 
   const skills = [
-    { name: "Sales & Marketing Strategy", icon: ChartLine, description: "Strategic planning and execution" },
-    { name: "Partnership Development", icon: Handshake, description: "Building strategic alliances" },
-    { name: "SME & Institutional Engagement", icon: Users, description: "Stakeholder relationship management" },
-    { name: "Team Leadership", icon: UserCheck, description: "Inspiring and guiding teams" },
-    { name: "Brand Innovation", icon: Lightbulb, description: "Creative brand development" }
+    { name: "Cloud & Hosting", icon: Cloud, description: "AWS, Linux Administration" },
+    { name: "Integration & API Development", icon: GitBranch, description: "Seamless system integrations" },
+    { name: "Database Architecture", icon: Database, description: "SQL, MySQL, MSSQL expertise" },
+    { name: "UI/UX Prototyping", icon: Monitor, description: "Figma, Adobe XD proficiency" },
+    { name: "Startup Tech Leadership", icon: Settings, description: "Scalable solution delivery" }
   ];
 
   const competencyTags = [
-    "Business Development",
-    "Strategic Partnerships", 
-    "Market Analysis",
-    "Brand Strategy",
-    "Stakeholder Management",
-    "Educational Innovation",
-    "SME Empowerment",
-    "Team Leadership"
+    "System Architecture",
+    "Cloud Platforms", 
+    "API Development",
+    "Database Design",
+    "Linux Administration",
+    "POPIA Compliance",
+    "Enterprise Integration",
+    "MVP Development"
   ];
 
   const handleContact = () => {
     // Open device's default calling app with pre-populated number
-    window.location.href = "tel:+27 68 113 1436";
+    window.location.href = "tel:+27817985685";
   };
 
   const handleLinkedIn = () => {
     // Open LinkedIn profile in new tab
-    window.open("https://www.linkedin.com/in/lebohang-kay-khoahlape-785a7a180", "_blank");
+    window.open("https://www.linkedin.com/in/siphesihle-dhlamini-96694b1a2/", "_blank");
   };
 
   return (
@@ -66,11 +70,11 @@ export default function Home() {
             <div className="relative">
               <div className="w-48 h-48 rounded-full bg-primary-foreground/20 border-4 border-primary-foreground/30 flex items-center justify-center overflow-hidden">
                 <div className="w-full h-full text-[12rem] flex items-center justify-center" data-testid="img-profile-avatar">
-                  👩🏾‍💼
+                  👨‍💻
                 </div>
               </div>
               <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-accent rounded-full flex items-center justify-center">
-                <Star className="w-6 h-6 text-accent-foreground" />
+                <Code className="w-6 h-6 text-accent-foreground" />
               </div>
               {/* Animated stars around avatar */}
               <div className="absolute -top-2 -left-2 w-6 h-6 text-yellow-300 animate-bounce" style={{animationDelay: '0s'}}>
@@ -93,10 +97,10 @@ export default function Home() {
             {/* Header Content */}
             <div className="flex-1 text-center lg:text-left">
               <h1 className="text-5xl lg:text-6xl font-bold mb-4" data-testid="text-name">
-                Lebohang Khoahlape
+                Siphesihle Dhlamini
               </h1>
               <h2 className="text-2xl lg:text-3xl font-light mb-6 opacity-90" data-testid="text-title">
-                Founder & Business Development Lead
+                Lead Developer & Technical Architect
               </h2>
               <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
                 <div className="flex items-center gap-2 bg-primary-foreground/20 px-4 py-2 rounded-full">
@@ -109,7 +113,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-2 bg-primary-foreground/20 px-4 py-2 rounded-full">
                   <Mail className="w-4 h-4" />
-                  <span>lebokhoahlape@gmail.com</span>
+                  <span>siphesihledhlamini384@gmail.com</span>
                 </div>
               </div>
               <div className="flex justify-center lg:justify-start gap-4">
@@ -140,24 +144,24 @@ export default function Home() {
           </div>
           <div className="prose prose-lg max-w-none">
             <p className="text-muted-foreground text-lg leading-relaxed" data-testid="text-about-description">
-              Lebo is a dynamic sales and marketing professional with a proven track record in insurance, education, and digital technology ventures. As the visionary behind ESPANENG, she combines strong client acquisition skills with a passion for innovation in education and SME empowerment.
+              Siphesihle is a software engineer and integration specialist with expertise in cloud platforms, databases, and enterprise systems. Having delivered technical solutions at i1Solutions and through Embakh Solutions, he is passionate about building scalable, compliance-ready platforms.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-            <div className="text-center p-4 bg-muted rounded-lg" data-testid="card-expertise-insurance">
-              <Shield className="w-8 h-8 text-primary mb-3 mx-auto" />
-              <h4 className="font-semibold mb-1">Insurance</h4>
-              <p className="text-sm text-muted-foreground">Industry Expertise</p>
+            <div className="text-center p-4 bg-muted rounded-lg" data-testid="card-expertise-cloud">
+              <Cloud className="w-8 h-8 text-primary mb-3 mx-auto" />
+              <h4 className="font-semibold mb-1">Cloud Architecture</h4>
+              <p className="text-sm text-muted-foreground">AWS & Scalable Infrastructure</p>
             </div>
-            <div className="text-center p-4 bg-muted rounded-lg" data-testid="card-expertise-education">
-              <GraduationCap className="w-8 h-8 text-primary mb-3 mx-auto" />
-              <h4 className="font-semibold mb-1">Education</h4>
-              <p className="text-sm text-muted-foreground">Sector Innovation</p>
+            <div className="text-center p-4 bg-muted rounded-lg" data-testid="card-expertise-database">
+              <Database className="w-8 h-8 text-primary mb-3 mx-auto" />
+              <h4 className="font-semibold mb-1">Database Systems</h4>
+              <p className="text-sm text-muted-foreground">Enterprise Data Solutions</p>
             </div>
-            <div className="text-center p-4 bg-muted rounded-lg" data-testid="card-expertise-tech">
-              <Laptop className="w-8 h-8 text-primary mb-3 mx-auto" />
-              <h4 className="font-semibold mb-1">Digital Tech</h4>
-              <p className="text-sm text-muted-foreground">Technology Ventures</p>
+            <div className="text-center p-4 bg-muted rounded-lg" data-testid="card-expertise-integration">
+              <Layers className="w-8 h-8 text-primary mb-3 mx-auto" />
+              <h4 className="font-semibold mb-1">System Integration</h4>
+              <p className="text-sm text-muted-foreground">API & Enterprise Workflows</p>
             </div>
           </div>
         </section>
@@ -236,13 +240,13 @@ export default function Home() {
           <div className="max-w-4xl mx-auto text-center">
             <Quote className="w-16 h-16 text-accent mb-6 mx-auto" />
             <blockquote className="text-2xl md:text-3xl font-medium text-foreground leading-relaxed mb-8" data-testid="text-quote">
-              "My drive is to see graduates leave with not just a qualification but a portfolio of impact — and SMEs empowered in the process."
+              "For me, ESPANENG is not just code — it's building infrastructure that empowers students, supervisors, and SMEs to collaborate at scale."
             </blockquote>
             <div className="flex items-center justify-center gap-4">
               <div className="w-1 h-16 bg-accent"></div>
               <div className="text-left">
-                <div className="font-semibold text-foreground">Lebohang Khoahlape</div>
-                <div className="text-muted-foreground">Founder & Business Development Lead</div>
+                <div className="font-semibold text-foreground">Siphesihle Dhlamini</div>
+                <div className="text-muted-foreground">Lead Developer & Technical Architect</div>
               </div>
             </div>
           </div>
@@ -250,9 +254,9 @@ export default function Home() {
 
         {/* Contact Section */}
         <section className="section-card bg-primary rounded-xl p-8 shadow-lg text-primary-foreground text-center">
-          <h2 className="text-3xl font-bold mb-4" data-testid="heading-contact">Let's Connect</h2>
+          <h2 className="text-3xl font-bold mb-4" data-testid="heading-contact">Let's Build Together</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Ready to explore partnerships, discuss business opportunities, or learn more about ESPANENG's innovative approach to education and SME empowerment?
+            Ready to discuss technical architecture, cloud solutions, or scalable system development? Let's collaborate on building the future of education technology.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button 
@@ -278,10 +282,11 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-muted py-8 px-6 mt-16">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-muted-foreground">&copy; 2025 Lebohang Khoahlape. All rights reserved.</p>
-          <p className="text-sm text-muted-foreground mt-2">Empowering education and SMEs through innovative partnerships.</p>
+          <p className="text-muted-foreground">&copy; 2025 Espaneng. All rights reserved.</p>
+          <p className="text-sm text-muted-foreground mt-2">Building scalable infrastructure that empowers collaboration and innovation.</p>
         </div>
       </footer>
     </div>
   );
 }
+
