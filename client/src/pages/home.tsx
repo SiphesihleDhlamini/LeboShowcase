@@ -53,7 +53,7 @@ export default function Home() {
 
   const handleLinkedIn = () => {
     // Open LinkedIn profile in new tab
-    window.open("https://www.linkedin.com/in/lebo-khoahlape", "_blank");
+    window.open("linkedin.com/in/lebohang-kay-khoahlape-785a7a180", "_blank");
   };
 
   return (
