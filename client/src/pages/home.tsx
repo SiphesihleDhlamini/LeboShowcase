@@ -109,7 +109,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-2 bg-primary-foreground/20 px-4 py-2 rounded-full">
                   <Mail className="w-4 h-4" />
-                  <span>lebo@espaneng.com</span>
+                  <span>lebokhoahlape@gmail.com</span>
                 </div>
               </div>
               <div className="flex justify-center lg:justify-start gap-4">
