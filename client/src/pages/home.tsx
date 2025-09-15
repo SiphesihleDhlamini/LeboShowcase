@@ -48,7 +48,7 @@ export default function Home() {
 
   const handleContact = () => {
     // Open device's default calling app with pre-populated number
-    window.location.href = "tel:+27123456789";
+    window.location.href = "tel:+27 68 113 1436";
   };
 
   const handleLinkedIn = () => {
